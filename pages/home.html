@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Gym POWER Store</title>
+     <link rel="stylesheet" href="../styles.css" />
+     <style>
+          
+          .social-icon i{
+               
+               font-size: 50px;
+               color:red;
+               filter:drop-shadow(1px 1px 2px rgb(208, 202, 202));
+
+          }
+          .social-icon{
+               
+               height: fit-content;     
+               width: fit-content;
+               background-color: none;
+               border: none;
+          }
+     </style>
+     <link rel="stylesheet" href="../logout_btn.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="../script.js" defer></script>
+</head>
+
+<body>
+     <!-- HEADER -->
+     <header class="main-header">
+          <div class="header-content">
+               <div class="logo-section">
+                    <img src="../images/logo.png" alt="Gym Power Store Logo" class="header-logo" />
+                    <span class="brand-name">GYM POWER</span>
+               </div>
+               <nav class="main-nav">
+                    <a href="home.html" class="active"
+                         onclick="event.preventDefault(); window.location.reload();">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+               </nav>
+               <div class="header-actions">
+                    <button class="theme-toggle" aria-label="Toggle theme">
+                         <i class="fa-solid fa-sun"></i>
+                    </button>
+                    <a href="cart.html" class="cart-link">
+                         <i class="fa-solid fa-cart-shopping"></i>
+                         <span>Cart (<span id="cart-count">0</span>)</span>
+                    </a>
+                    <button class="logout-btn" onclick="logout()">Logout</button>
+               </div>
+          </div>
+     </header>
+
+     <!-- MAIN CONTENT -->
+     <main class="main-content">
+          <section class="hero">
+               <div class="hero-content">
+                    <h1 class="hero-title">Welcome to Gym Power Store</h1>
+                    <p class="hero-subtitle">Your ultimate destination for premium gym and sports gear.</p>
+                    <a href="products.html" class="shop-now-btn">
+                         Shop Now
+                         <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+               </div>
+          </section>
+     </main>
+
+     <!-- FOOTER -->
+     <footer class="main-footer">
+          <div class="footer-content">
+               <div class="footer-links">
+                    <a href="home.html" onclick="event.preventDefault(); window.location.reload();">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    </div>
+               <div class="social-icon-row">
+                    <div class="social-media">
+                         <a href="https://www.facebook.com/YourPageName" class="social-icon" id="facebook" aria-label="Facebook">
+                              <i class="fa-brands fa-facebook"></i>
+                              
+                              
+                         <a href="https://www.instagram.com/YourProfileName" class="social-icon" aria-label="Instagram">
+                              <i class="fa-brands fa-instagram"></i>
+                         </a>
+                         <a href="https://www.snapchat.com/add/YourUsername" class="social-icon" aria-label="Snapchat">
+                              <i class="fa-brands fa-snapchat-ghost"></i>
+                         </a>
+                         <a href="https://www.tiktok.com/@YourUsername" class="social-icon" aria-label="TikTok">
+                              <i class="fa-brands fa-tiktok"></i>
+                         </a>
+                    </div>
+               </div>
+               <div class="footer-bottom">
+                    <p class="footer-credit">Designed by Karim Salah</p>
+                    <p>© 2025 Gym Power Store. All Rights Reserved.</p>
+               </div>
+          </div>
+     </footer>
+     <script>
+          function logout() {
+               localStorage.removeItem("loggedIn");
+               window.location.href = "../index.html";
+          }
+     </script>
+</body>
+</html>

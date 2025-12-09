@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products - Gym POWER Store</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .social-icon i {
+      font-size: 50px;
+      color: red;
+      filter: drop-shadow(1px 1px 2px rgb(208, 202, 202));
+    }
+    .social-icon {
+      height: fit-content;
+      width: fit-content;
+      background-color: none;
+      border: none;
+    }
+  </style>
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="header-content">
+      <div class="logo-section">
+        <img src="../images/logo.png" alt="Gym Power Store Logo" class="header-logo" />
+        <span class="brand-name">GYM POWER</span>
+      </div>
+      <nav class="main-nav">
+        <a href="home.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <a href="cart.html" class="cart-link">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Cart (<span id="cart-count">0</span>)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <section class="products-section">
+      <h2 class="section-title">Gym Gear</h2>
+      <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search products..." />
+        <i class="fa-solid fa-search search-icon"></i>
+      </div>
+      <div class="category-filter">
+        <button class="category-btn active" data-category="all">
+          All Products
+        </button>
+        <button class="category-btn" data-category="footwear">
+          Footwear
+        </button>
+        <button class="category-btn" data-category="supplements">
+          supplements
+        </button>
+        <button class="category-btn" data-category="equipment">
+          Equipment
+        </button>
+        <button class="category-btn" data-category="apparel">Apparel</button>
+        <button class="category-btn" data-category="accessories">
+          Accessories
+        </button>
+      </div>
+      <div class="items">
+        <!-- Footwear Category -->
+        <div class="product-container" data-name="Training Shoes" data-category="footwear">
+          <div class="product-image-wrapper">
+            <img src="running_shoes.jpg" alt="Training Shoes" onerror="this.src='../images/running_shoes.jpg'" />
+          </div>
+          <div class="product-info">
+            <h3>Training Shoes</h3>
+            <p class="product-price">$99</p>
+            <button class="add-to-cart" data-product="Training Shoes" data-price="99">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <!-- supplements Category -->
+        <div class="product-container" data-name="supplements" data-category="supplements">
+          <div class="product-image-wrapper">
+            <img src="supplements.jpeg" alt="supplements" onerror="this.src='../images/supplements.jpeg'" /><img
+              src="supplements.jpeg" alt="supplements" onerror="this.src='../images/supplements.jpeg'" />
+          </div>
+          <div class="product-info">
+            <h3>supplements</h3>
+            <p class="product-price">$129</p>
+            <button class="add-to-cart" data-product="supplements" data-price="129">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <!-- Equipment Category -->
+        <div class="product-container" data-name="Dumbbells" data-category="equipment">
+          <div class="product-image-wrapper">
+            <img src="dumbbell.jpeg" alt="Dumbbells" onerror="this.src='../images/dumbbell.jpeg'" />
+          </div>
+          <div class="product-info">
+            <h3>Dumbbells Set</h3>
+            <p class="product-price">$149</p>
+            <button class="add-to-cart" data-product="Dumbbells" data-price="149">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-container" data-name="Resistance Bands" data-category="equipment">
+          <div class="product-image-wrapper">
+            <img src="resistance_bands.jpg" alt="Resistance Bands"
+              onerror="this.src='../images/resistance_bands.jpeg'" />
+          </div>
+          <div class="product-info">
+            <h3>Resistance Bands</h3>
+            <p class="product-price">$35</p>
+            <button class="add-to-cart" data-product="Resistance Bands" data-price="35">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-container" data-name="Figure-8 Strap" data-category="equipment">
+          <div class="product-image-wrapper">
+            <img src="figer-8.jpeg" alt="Figure-8 Strap" onerror="this.src='../images/figer-8.jpeg'" />
+          </div>
+          <div class="product-info">
+            <h3>Figure-8 Strap</h3>
+            <p class="product-price">$250</p>
+            <button class="add-to-cart" data-product="Figure-8 Strap" data-price="250">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <!-- Apparel Category -->
+        <div class="product-container" data-name="T-Shirt" data-category="apparel">
+          <div class="product-image-wrapper">
+            <img src="t-shirt.jpeg" alt="T-Shirt" onerror="this.src='../images/t-shirt.jpeg'" />
+          </div>
+          <div class="product-info">
+            <h3>Gym T-Shirt</h3>
+            <p class="product-price">$45</p>
+            <button class="add-to-cart" data-product="Gym T-Shirt" data-price="45">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-container" data-name="Tank Top" data-category="apparel">
+          <div class="product-image-wrapper">
+            <img src="tank_top.jpeg" alt="Tank Top" onerror="this.src='../images/tank_top.jpeg'" />
+          </div>
+          <div class="product-info">
+            <h3>Tank Top</h3>
+            <p class="product-price">$35</p>
+            <button class="add-to-cart" data-product="Tank Top" data-price="35">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-container" data-name="Gym Shorts" data-category="apparel">
+          <div class="product-image-wrapper">
+            <img src="shorts.jpeg" alt="Gym Shorts" onerror="this.src='../images/shorts.jpeg'" />
+          </div>
+          <div class="product-info">
+            <h3>Gym Shorts</h3>
+            <p class="product-price">$55</p>
+            <button class="add-to-cart" data-product="Gym Shorts" data-price="55">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-container" data-name="Hoodie" data-category="apparel">
+          <div class="product-image-wrapper">
+            <img src="hoddie.jpeg" alt="Hoodie" onerror="this.src='../images/hoodie.jpeg'" />
+          </div>
+          <div class="product-info">
+            <h3>Gym Hoodie</h3>
+            <p class="product-price">$85</p>
+            <button class="add-to-cart" data-product="Gym Hoodie" data-price="85">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <!-- Accessories Category -->
+        <div class="product-container" data-name="Gym Bag" data-category="accessories">
+          <div class="product-image-wrapper">
+            <img src="gym_bag.jpeg" alt="Gym Bag" onerror="this.src='../images/gym_bag.jpeg'" />
+          </div>
+          <div class="product-info">
+            <h3>Gym Bag</h3>
+            <p class="product-price">$59</p>
+            <button class="add-to-cart" data-product="Gym Bag" data-price="59">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-container" data-name="Gym Gloves" data-category="accessories">
+          <div class="product-image-wrapper">
+            <img src="gym_glooves.jpeg" alt="Gym Gloves" onerror="this.src='../images/gym_glooves.jpg'" />
+          </div>
+          <div class="product-info">
+            <h3>Gym Gloves</h3>
+            <p class="product-price">$25</p>
+            <button class="add-to-cart" data-product="Gym Gloves" data-price="25">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-container" data-name="Protein Shaker" data-category="accessories">
+          <div class="product-image-wrapper">
+            <img src="shaker.png.webp" alt="Protein Shaker" onerror="this.src='../images/shaker.png.webp'" />
+          </div>
+          <div class="product-info">
+            <h3>Protein Shaker</h3>
+            <p class="product-price">$39</p>
+            <button class="add-to-cart" data-product="Protein Shaker" data-price="39">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-container" data-name="Water Bottle" data-category="accessories">
+          <div class="product-image-wrapper">
+            <img src="waterbottle.jpeg" alt="Water Bottle" onerror="this.src='../images/waterbottle.jpeg'" />
+          </div>
+          <div class="product-info">
+            <h3>Water Bottle</h3>
+            <p class="product-price">$29</p>
+            <button class="add-to-cart" data-product="Water Bottle" data-price="29">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+          <div class="product-container" data-name="creatine" data-category="supplements">
+        <div class="product-image-wrapper">
+          <img src="lvl_creatine" alt="creatine" onerror="this.src='../images/lvl_creatine.jpeg'">
+          </div>
+        <div class="product-info">
+          <h3>creatine</h3>
+          <p class="product-price">$89</p>
+          <button class="add-to-cart" data-product="creatine" data-price="89">Add to Cart</button>
+          </div>
+      </div>
+      <div class="product-container" data-name="pre-workout" data-category="supplements">
+        <div class="product-image-wrapper">
+          <img src="pre_workout.jpeg" alt="pre-workout" onerror="this.src='../images/pre_workout.jpeg'">
+          </div>
+        <div class="product-info">
+          <h3>preWorkout</h3>
+          <p class="product-price">$100</p>
+          <button class="add-to-cart" data-product="preWorkout" data-price="100">Add to Cart</button>
+          </div>
+          </div>
+            <div class="product-container" data-name="whey protein" data-category="supplements">
+        <div class="product-image-wrapper">
+          <img src="wheyprotein.jpeg" alt="whey protein" onerror="this.src='../images/wheyprotein.jpeg'">
+          </div>
+        <div class="product-info">
+          <h3>whey protein</h3>
+          <p class="product-price">$250</p>
+          <button class="add-to-cart" data-product="creatine" data-price="250">Add to Cart</button>
+          </div>
+          </div>
+            <div class="product-container" data-name="jacket" data-category="apparel">
+        <div class="product-image-wrapper">
+          <img src="jackets.jpeg" alt="jacket" onerror="this.src='../images/jackets.jpeg'">
+          </div>
+        <div class="product-info">
+          <h3>jacket</h3>
+          <p class="product-price">$70</p>
+          <button class="add-to-cart" data-product="creatine" data-price="70">Add to Cart</button>
+          </div>
+          </div>
+            <div class="product-container" data-name="yoga mat" data-category="equipment">
+        <div class="product-image-wrapper">
+          <img src="yoga mat.jpeg" alt="yoga mat" onerror="this.src='../images/yoga mat.jpeg'">
+          </div>
+        <div class="product-info">
+          <h3>Yoga Mat</h3>
+          <p class="product-price">$65</p>
+          <button class="add-to-cart" data-product="creatine" data-price="65">Add to Cart</button>
+          </div>
+          </div>
+      </div>
+    </section>
+  </main>
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="home.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-media">
+        <a href="#" class="social-icon" aria-label="Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="#" class="social-icon" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="social-icon" aria-label="Snapchat">
+          <i class="fa-brands fa-snapchat"></i>
+        </a>
+        <a href="#" class="social-icon" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-credit">Designed by Karim Salah</p>
+        <p>© 2025 Gym Power Store. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
